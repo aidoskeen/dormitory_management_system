@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+  <persistence-unit name="DormitoryManagement">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>com.application.dormitorysystem.model.User</class>
+    <class>com.application.dormitorysystem.model.Administrator</class>
+    <class>com.application.dormitorysystem.model.Student</class>
+    <class>com.application.dormitorysystem.model.Dormitory</class>
+    <class>com.application.dormitorysystem.model.Room</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url"
+                value="jdbc:mysql://localhost:3306/dbdorm?createDatabaseIfNotExist=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="Aiidos2000"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
